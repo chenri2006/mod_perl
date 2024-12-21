@@ -1,0 +1,19 @@
+name: Shell
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: self-hosted
+    name: Build
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Shell - View environment
+        run: |
+          uname -a
+          printenv | sort
+
