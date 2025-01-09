@@ -1,0 +1,13 @@
+name: Manual Workflow
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  example_job:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run a script
+        run: echo "This is a manually triggered workflow."
